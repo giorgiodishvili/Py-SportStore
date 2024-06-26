@@ -1,0 +1,22 @@
+{% extends 'SportStore/base.html' %}
+
+{% block title %}My Wishlist{% endblock %}
+
+{% block content %}
+<h2>My Wishlist</h2>
+{% if wishlist.items.exists %}
+    <ul class="list-group">
+        {% for item in wishlist.items.all %}
+        <li class="list-group-item">
+            <a href="{% url 'product_detail' item.product.id %}">{{ item.product.name }}</a>
+            <form action="{% url 'add_to_cart' item.product.id %}" method="post" class="d-inline">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-primary btn-sm">Add to Cart</button>
+            </form>
+        </li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>Your wishlist is empty.</p>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+name,description,price,image_url,category,stock
+Soccer Ball,A high-quality soccer ball for professional games.,29.99,https://example.com/images/soccer_ball.jpg,Sports,100
+Running Shoes,Comfortable running shoes for daily workouts.,49.99,https://example.com/images/running_shoes.jpg,Clothing,200
+Yoga Mat,Eco-friendly yoga mat with non-slip surface.,19.99,https://example.com/images/yoga_mat.jpg,Accessories,150
+Basketball Hoop,Sturdy basketball hoop for outdoor use.,79.99,https://example.com/images/basketball_hoop.jpg,Sports,50
+Fitness Tracker,Track your daily activities and health metrics.,99.99,https://example.com/images/fitness_tracker.jpg,Accessories,75
+Tennis Racket,Lightweight tennis racket for competitive play.,59.99,https://example.com/images/tennis_racket.jpg,Sports,80
+Cycling Helmet,Durable cycling helmet for safety on the road.,39.99,https://example.com/images/cycling_helmet.jpg,Accessories,120
+Football Jersey,Breathable football jersey for match day.,29.99,https://example.com/images/football_jersey.jpg,Clothing,90
+Golf Clubs,Set of high-quality golf clubs for all levels.,299.99,https://example.com/images/golf_clubs.jpg,Sports,30
+Water Bottle,Insulated water bottle to keep your drink cool.,14.99,https://example.com/images/water_bottle.jpg,Accessories,250

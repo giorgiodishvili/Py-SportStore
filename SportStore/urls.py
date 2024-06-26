@@ -16,7 +16,6 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from django.urls import path
 from . import views
 
 urlpatterns = [
@@ -33,5 +32,9 @@ urlpatterns = [
     path('my_orders/', views.my_orders, name='my_orders'),
     path('search/', views.search, name='search'),
     path('product/<int:product_id>/', views.product_detail, name='product_detail'),
+    path('bulk_upload/', views.bulk_upload, name='bulk_upload'),
+    path('profile/', views.profile, name='profile'),
+    path('wishlist/', views.view_wishlist, name='wishlist'),
+    path('add_to_wishlist/<int:product_id>/', views.add_to_wishlist, name='add_to_wishlist'),
 ]
 

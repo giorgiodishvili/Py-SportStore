@@ -1,4 +1,3 @@
-<!-- SportStore/templates/SportStore/login.html -->
 
 {% extends 'SportStore/base.html' %}
 
@@ -6,16 +5,23 @@
 
 {% block content %}
 <h2>Login</h2>
-<form method="post" class="needs-validation" novalidate>
+<form method="post">
     {% csrf_token %}
-    <div class="form-group">
-        <label for="username">Username</label>
+    {{ form.non_field_errors }}
+    <div class="mb-3">
+        {{ form.username.label_tag }}
         {{ form.username }}
+        <div class="invalid-feedback">
+            {{ form.username.errors }}
+        </div>
     </div>
-    <div class="form-group">
-        <label for="password">Password</label>
+    <div class="mb-3">
+        {{ form.password.label_tag }}
         {{ form.password }}
+        <div class="invalid-feedback">
+            {{ form.password.errors }}
+        </div>
     </div>
-    <button type="submit" class="btn btn-primary btn-lg btn-block">Login</button>
+    <button type="submit" class="btn btn-primary">Login</button>
 </form>
 {% endblock %}
