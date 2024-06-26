@@ -1,0 +1,16 @@
+<!-- SportStore/templates/SportStore/order_confirmation.html -->
+
+{% extends 'SportStore/base.html' %}
+
+{% block title %}Order Confirmation{% endblock %}
+
+{% block content %}
+<div class="jumbotron text-center">
+    <h1 class="display-4">Thank you for your order!</h1>
+    <p class="lead">Your order ID is <strong>{{ order.id }}</strong></p>
+    <p>Total: ${{ order.total_price }}</p>
+    <hr class="my-4">
+    <p>We will send you an email confirmation shortly.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'landing' %}" role="button">Return to Store</a>
+</div>
+{% endblock %}

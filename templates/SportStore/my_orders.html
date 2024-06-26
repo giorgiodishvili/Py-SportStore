@@ -1,0 +1,31 @@
+<!-- SportStore/templates/SportStore/my_orders.html -->
+
+{% extends 'SportStore/base.html' %}
+
+{% block title %}My Orders{% endblock %}
+
+{% block content %}
+<h2>My Orders</h2>
+{% if orders %}
+    {% for order in orders %}
+    <div class="card mb-3">
+        <div class="card-header">
+            Order ID: {{ order.id }} - {{ order.created_at }}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Total: ${{ order.total_price }}</h5>
+            <ul class="list-group">
+                {% for item in order.items.all %}
+                <li class="list-group-item">
+                    {{ item.product.name }} - Quantity: {{ item.quantity }} - Price: ${{ item.product.price }}
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+    {% endfor %}
+{% else %}
+    <p>You have no orders.</p>
+{% endif %}
+<a href="{% url 'landing' %}" class="btn btn-secondary mt-3">Return to Store</a>
+{% endblock %}

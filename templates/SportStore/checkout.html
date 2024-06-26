@@ -1,0 +1,35 @@
+<!-- SportStore/templates/SportStore/checkout.html -->
+
+{% extends 'SportStore/base.html' %}
+
+{% block title %}Checkout{% endblock %}
+
+{% block content %}
+<h2>Checkout</h2>
+<form method="post" class="needs-validation" novalidate>
+    {% csrf_token %}
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="address">Address</label>
+            {{ form.address }}
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="city">City</label>
+            {{ form.city }}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6 mb-3">
+            <label for="postal_code">Postal Code</label>
+            {{ form.postal_code }}
+        </div>
+        <div class="col-md-6 mb-3">
+            <label for="country">Country</label>
+            {{ form.country }}
+        </div>
+    </div>
+    <hr class="mb-4">
+    <p><strong>Total: ${{ total }}</strong></p>
+    <button class="btn btn-primary btn-lg btn-block" type="submit">Place Order</button>
+</form>
+{% endblock %}
